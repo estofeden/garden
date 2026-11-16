@@ -178,3 +178,40 @@ html, body {
 :root[saved-theme="dark"] .garden-footer {
   color: var(--darkgray);
 }
+/* A little candle for the welcome page */
+.welcome-candle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto 24px;
+  width: 60px;
+}
+
+.candle-flame {
+  width: 15px;
+  height: 25px;
+  margin-bottom: 8px;
+  border-radius: 70% 30% 60% 40%;
+  background: #e8bd58;
+  transform: rotate(8deg);
+  box-shadow: 0 0 22px #e8bd5840;
+}
+
+.candle-stick {
+  display: block;
+  width: 22px;
+  height: 92px;
+  border: 1px solid #b87989;
+  border-radius: 3px 3px 1px 1px;
+  background: repeating-linear-gradient(
+    -35deg,
+    #e7a0b2 0 12px,
+    #fff0da 12px 22px
+  );
+}
+
+.welcome-whisper {
+  text-align: center;
+  color: var(--darkgray);
+  font-style: italic;
+}

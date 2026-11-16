@@ -3,7 +3,18 @@ import { pathToRoot } from "../../util/path"
 
 export default function GardenHeader({ cfg, fileData, allFiles }: QuartzComponentProps) {
   const root = pathToRoot(fileData.slug!)
-  const pages = [ ["home", ""], ["books", "books"], ["notes", "notes"], ["about", "about"] ]
+    const pages = [
+    ["home", ""],
+    ["books", "books"],
+    ["the listening room", "music"],
+    ["recipes", "recipes"],
+    ["the dressing room", "fashion"],
+    ["hopes & dreams", "hopes--and--dreams"],
+    ["out & about", "out--and--about"],
+    ["made by me", "made-by-me"],
+    ["small joys", "small-joys"],
+    ["thoughts & discoveries", "thoughts--and--discoveries"],
+  ]
   return <div class="garden-header">
     <svg class="party party-left" viewBox="0 0 130 155" aria-hidden="true">
         <path d="M61 -8 C88 20 22 19 35 42 S78 52 48 73 S28 96 35 110" fill="none" stroke="#df939e" stroke-width="5"/>

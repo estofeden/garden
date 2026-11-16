@@ -1,16 +1,14 @@
 ---
 title: Hey, you made it!
 ---
-Welcome to my garden; where i plant myself and we watch it grow!
+---
+make a wish before you wander
+---
 
-## Take a look around
+<div class="welcome-candle" aria-label="A little birthday candle">
+  <span class="candle-flame"></span>
+  <span class="candle-stick"></span>
+</div>
 
-- [[books|what is jun reading?]]
-- [[thoughts & discoveries|thoughts & discoveries]]
-- [[recipes|recipes]]
-- [[hopes & dreams|hopes & dreams]]
-- [[music|the listening room]]
-- [[small joys|small joys]]
-- [[out and about|out & about]]
-- [[made by me]]
-- [[fashion|the dressing room]]
+<p class="welcome-whisper">stay a little. look around.</p>
+
