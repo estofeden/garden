@@ -163,3 +163,18 @@ html, body {
   background-size: 240px 70px;
   background-repeat: repeat-x;
 }
+:root[saved-theme="dark"] {
+  color-scheme: dark;
+  --light: #34271f;
+  --lightgray: #584539;
+  --gray: #b59c85;
+  --darkgray: #e3d0b9;
+  --dark: #fff0d9;
+  --secondary: #e7a0b2;
+  --tertiary: #aec69a;
+  --highlight: #a9bce025;
+}
+
+:root[saved-theme="dark"] .garden-footer {
+  color: var(--darkgray);
+}
