@@ -1,3 +1,165 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* Deep oak garden: ivory stays ivory in both system appearances. */
+:root, :root[saved-theme="dark"], :root[saved-theme="light"] {
+  color-scheme: light;
+  --light: #fff7e8; --lightgray: #e2d5bf; --gray: #927d68;
+  --darkgray: #594234; --dark: #412a20; --secondary: #955267;
+  --tertiary: #6d825b; --highlight: #a2afd622; --textHighlight: #e9c65c55;
+  --titleFont: "EB Garamond", Georgia, serif;
+  --headerFont: "EB Garamond", Georgia, serif;
+  --bodyFont: "EB Garamond", Georgia, serif;
+}
+html, body {
+  background: repeating-linear-gradient(
+    to bottom,
+    #ead49d 0 90px,
+    #604333 90px 180px,
+    #e7a0b2 180px 270px,
+    #a9bce0 270px 360px
+  );
+}
+body { font-style: italic; }
+.page { width: calc(100% - 56px); max-width: 960px; margin: 42px auto; padding: 0; background: var(--light); border: 1px solid #cbb496; box-sizing: border-box; }
+.page > #quartz-body {
+  display: grid; grid-template-columns: 145px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "garden-header garden-header" "grid-sidebar-left garden-content" "garden-footer garden-footer";
+  gap: 0; padding: 0; min-height: 650px;
+}
+.garden-header { grid-area: garden-header; position: relative; padding: 42px 145px 26px; text-align: center; border-bottom: 1px solid #bca88b; }
+.garden-name { margin: 0 0 18px; font-size: 48px; font-weight: 400; line-height: 1.05; }
+.garden-name a { color: var(--dark); font-weight: 400; background: transparent; }
+.garden-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 30px; }
+.garden-nav a { color: var(--dark); font-size: 20px; font-weight: 400; padding: 3px 0; border-bottom: 1px solid transparent; }
+.garden-nav a[aria-current="page"] { border-color: #b57882; }
+.garden-nav a:hover { color: var(--secondary); }
+.party { position: absolute; top: 8px; width: 130px; height: 155px; pointer-events: none; }
+.party-left { left: 5px; } .party-right { right: 5px; }
+.page > #quartz-body > .sidebar.left { grid-area: grid-sidebar-left; border-right: 1px solid #bca88b; padding: 38px 16px; position: static; height: auto; width: auto; align-items: stretch; gap: 20px; min-width: 0; overflow-wrap: anywhere; }
+.page > #quartz-body > .sidebar.right { display: none; }
+.page > #quartz-body > .center { grid-area: garden-content; padding: 38px 40px 48px; margin: 0; min-width: 0; min-height: 450px; border-radius: 0; box-sizing: border-box; }
+.page > #quartz-body .page-header { margin: 0 0 20px; padding: 0; }
+.page .article-title { margin: 0 0 8px; font-size: 36px; line-height: 1.1; font-weight: 400; }
+.page h1, .page h2, .page h3, .page h4 { font-style: italic; font-weight: 400; }
+.page article { font-size: 19px; line-height: 1.55; }
+.page article p, .page article li { font-size: inherit; line-height: inherit; }
+.page article h2 { font-size: 27px; margin: 25px 0 10px; }
+.page article a.internal { color: var(--dark); background: transparent; font-weight: 400; text-decoration: underline; text-decoration-color: #b57882; text-underline-offset: 4px; }
+.page article a:hover { color: var(--secondary); }
+.page article code, .page article pre { font-style: normal; }
+.page .center > hr { margin-top: 32px; }
+.page .center .page-footer:empty { display: none; }
+.page .search > .search-button { font-family: var(--bodyFont); font-style: italic; border-color: #bca88b; border-radius: 0; }
+.page .explorer button { font-family: var(--bodyFont); font-style: italic; }
+.page .explorer ul li > a { font-weight: 400; }
+.page .garden-footer { grid-area: garden-footer; border-top: 1px solid #bca88b; padding: 13px 24px; text-align: center; font-size: 14px; color: #786151; margin: 0; }
+@media (max-width: 650px) {
+  .page { width: calc(100% - 24px); margin: 22px auto; }
+  .page > #quartz-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr auto; grid-template-areas: "garden-header" "grid-sidebar-left" "garden-content" "garden-footer"; min-height: 0; }
+  .garden-header { padding: 65px 15px 24px; }
+  .garden-name { font-size: 38px; }
+  .party { width: 85px; height: 105px; top: 0; }
+  .garden-nav { gap: 12px 24px; }
+  .page > #quartz-body > .sidebar.left { border-right: 0; border-bottom: 1px solid #e2d5bf; padding: 12px 24px; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .page > #quartz-body > .center { padding: 30px 24px 40px; min-height: 0; }
+  .page .article-title { font-size: 31px; }
+}
+/* Fine paper grain over the background stripes */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23000' filter='url(%23grain)' opacity='.5' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+}
+/* Mostly blue, with narrower buttercream stripes */
+html, body {
+  background: repeating-linear-gradient(
+    to bottom,
+    #a9bce0 0 90px,
+    #604333 90px 180px,
+    #e7a0b2 180px 270px,
+    #ead49d 270px 360px
+  );
+}
+/* More visible paper texture */
+body::before {
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+/* A scalloped paper edge */
+.page {
+  position: relative;
+  isolation: isolate;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle, var(--light) 7px, transparent 7.5px)
+      left top / 16px 16px repeat-x,
+    radial-gradient(circle, var(--light) 7px, transparent 7.5px)
+      left bottom / 16px 16px repeat-x,
+    radial-gradient(circle, var(--light) 7px, transparent 7.5px)
+      left top / 16px 16px repeat-y,
+    radial-gradient(circle, var(--light) 7px, transparent 7.5px)
+      right top / 16px 16px repeat-y;
+}
+
+/* Larger, flowing italic lettering */
+.page .garden-name {
+  font-size: clamp(44px, 6vw, 68px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.garden-header {
+  padding-top: 48px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 650px) {
+  .garden-header {
+    padding-top: 70px;
+  }
+}
+html, body {
+  background-color: #f4e7ce;
+  background-image:
+    radial-gradient(circle at 18px 25px, #a9bce0 3px, transparent 3.5px),
+    radial-gradient(circle at 76px 64px, #e7a0b2 3px, transparent 3.5px),
+    radial-gradient(circle at 125px 19px, #e8c65f 2.5px, transparent 3px),
+    radial-gradient(circle at 46px 111px, #9eb38b 3px, transparent 3.5px),
+    radial-gradient(circle at 149px 99px, #a9bce0 2.5px, transparent 3px),
+    radial-gradient(circle at 109px 143px, #e7a0b2 2.5px, transparent 3px);
+  background-size: 173px 163px;
+}
+/* Draped ribbons along the top border */
+.page::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 70px;
+  pointer-events: none;
+  z-index: 2;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='70' viewBox='0 0 240 70'%3E%3Cpath d='M0 10Q60 83 120 10Q180 83 240 10' fill='none' stroke='%23e7a0b2' stroke-width='4'/%3E%3Cpath d='M0 18Q60 73 120 18Q180 73 240 18' fill='none' stroke='%23a9bce0' stroke-width='3'/%3E%3C/svg%3E");
+  background-size: 240px 70px;
+  background-repeat: repeat-x;
+}

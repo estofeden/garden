@@ -1,4 +1,5 @@
 import { PageFrame, PageFrameProps } from "./types"
+import GardenHeader from "./GardenHeader"
 import HeaderConstructor from "../Header"
 
 const Header = HeaderConstructor()
@@ -24,6 +25,7 @@ export const DefaultFrame: PageFrame = {
   }: PageFrameProps) {
     return (
       <>
+        <GardenHeader {...componentData} />
         <div class="left sidebar" data-sidebar-mode={sidebars?.left ?? "fit"}>
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
@@ -55,9 +57,7 @@ export const DefaultFrame: PageFrame = {
             <BodyComponent {...componentData} />
           ))}
         </div>
-        {footer.map((FooterComponent) => (
-          <FooterComponent {...componentData} />
-        ))}
+        <footer class="garden-footer">a little room to be curious.</footer>
       </>
     )
   },

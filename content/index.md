@@ -1,7 +1,7 @@
 ---
-title: Welcome to Quartz
+title: Hey, you made it!
 ---
-welcome to my garden!
+Welcome to my garden.
 
 This is a blank Quartz installation.
 See the [documentation](https://quartz.jzhao.xyz) for how to get started.
