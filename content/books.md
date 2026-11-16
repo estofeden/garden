@@ -1,10 +1,8 @@
 # My reading corner
 
-## Currently reading
-Kitchen by Banana Yoshimoto
-Make Your Mind
+[[Currently reading]]
 
-## Books I loved
+[[archive of books | archive of books]]
 [[Project Hail Mary]]
 [[The Hobbit by J.R.R. Tolkien]]
 [[Sula by Toni Morrison]]

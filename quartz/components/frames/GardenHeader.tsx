@@ -6,6 +6,7 @@ export default function GardenHeader({ cfg, fileData, allFiles }: QuartzComponen
     const pages = [
     ["home", ""],
     ["books", "books"],
+    ["film", "film"],
     ["the listening room", "music"],
     ["recipes", "recipes"],
     ["the dressing room", "fashion"],

@@ -215,3 +215,174 @@ html, body {
   color: var(--darkgray);
   font-style: italic;
 }
+/* Two little snapshots */
+.callout[data-callout="snapshots"] {
+  background: transparent;
+  border: 0;
+  padding: 16px 8px 28px;
+  margin: 24px 0;
+  overflow: visible;
+}
+
+.callout[data-callout="snapshots"] > .callout-title {
+  display: none;
+}
+
+.callout[data-callout="snapshots"] > .callout-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  overflow: visible;
+}
+
+.callout[data-callout="snapshots"] .callout-content > p {
+  margin: 0;
+  padding: 9px 9px 30px;
+  background: #fffaf0;
+  box-shadow: 0 5px 14px #30201625;
+  transform: rotate(-3deg);
+}
+
+.callout[data-callout="snapshots"] .callout-content > p:nth-child(2) {
+  transform: rotate(3deg);
+  margin-top: 22px;
+}
+
+.callout[data-callout="snapshots"] img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 650px) {
+  .callout[data-callout="snapshots"] > .callout-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+.callout[data-callout="snapshots"] .callout-content > p {
+  align-self: start;
+}
+
+.callout[data-callout="snapshots"] img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.callout[data-callout="snapshots"] .internal-embed {
+  display: block;
+  width: 100%;
+}
+/* Let the snapshots overlap the letter edges */
+.callout[data-callout="snapshots"],
+.callout[data-callout="snapshots"] > .callout-content {
+  overflow: visible;
+}
+
+.callout[data-callout="snapshots"] {
+  position: relative;
+  z-index: 3;
+}
+
+.callout[data-callout="snapshots"] .callout-content > p:first-child {
+  transform: translateX(-235px) rotate(-6deg);
+}
+
+.callout[data-callout="snapshots"] .callout-content > p:nth-child(2) {
+  transform: translateX(70px) rotate(5deg);
+}
+
+/* Keep photos inside the screen on smaller displays */
+@media (max-width: 800px) {
+  .callout[data-callout="snapshots"] .callout-content > p:first-child {
+    transform: translateX(-18px) rotate(-4deg);
+  }
+
+  .callout[data-callout="snapshots"] .callout-content > p:nth-child(2) {
+    transform: translateX(18px) rotate(4deg);
+  }
+}
+/* Wider envelope, same-sized letter */
+.invitation-envelope {
+  left: -3%;
+  width: 106%;
+}
+
+.invitation-paper {
+  left: 10%;
+  width: 80%;
+}
+/* BEGIN EDEN PARTY INVITATION */
+.party-invitation {
+  --invitation-lift: 1;
+  --invitation-flap: -180deg;
+  --invitation-pink-tilt: -6deg;
+  --invitation-blue-tilt: 5deg;
+  --invitation-seal: 0;
+  position: relative;
+  padding-bottom: 620px;
+}
+.invitation-stage { position: sticky; top: 12px; height: 940px; isolation: isolate; perspective: 1100px; }
+.invitation-envelope { position: absolute; bottom: 66px; left: 3%; width: 94%; height: 230px; background: #ddcfb6; border: 1px solid #d8c6a8; border-radius: 5px; box-shadow: 0 15px 28px #59412a20; }
+.invitation-flap { position: absolute; inset: 0 0 auto; height: 148px; background: linear-gradient(175deg,#fff5df 5%,#f2e3c5 90%); clip-path: polygon(0 0,100% 0,94% 15%,85% 34%,75% 55%,65% 75%,58% 89%,54% 96%,50% 98%,46% 96%,42% 89%,35% 75%,25% 55%,15% 34%,6% 15%); transform-origin: 50% 0; transform: rotateX(var(--invitation-flap)); z-index: 4; }
+.invitation-is-open .invitation-flap { z-index: 0; }
+.invitation-paper-slot { position: absolute; left: -2%; width: 104%; bottom: 0; height: 1300px; overflow: hidden; z-index: 2; }
+.invitation-paper { position: absolute; bottom: 250px; left: 5%; width: 90%; height: 575px; background: #fff7e8; color: #493127; padding: 27px 16px; border: 1px solid #d8c4a8; box-shadow: 0 2px 10px #4931271a; transform: translateY(calc((1 - var(--invitation-lift)) * 825px)); }
+.invitation-paper::before { content: ''; position: absolute; inset: 9px; border: 1px solid #cfb99b; pointer-events: none; }
+.page .invitation-paper-title { color: #493127; font-size: 27px; font-weight: 400; font-style: italic; text-align: center; margin: 0 0 24px; }
+.invitation-composition { display: grid; grid-template-columns: 21% minmax(0,1fr) 21%; gap: 12px; align-items: start; }
+.invitation-strip { padding: 7px 7px 22px; box-shadow: 0 3px 8px #49312720; }
+.invitation-strip-pink { background: repeating-linear-gradient(0deg,#e7a0b2 0 18px,#705043 18px 36px); transform: rotate(var(--invitation-pink-tilt)); }
+.invitation-strip-blue { background: repeating-linear-gradient(0deg,#a9bce0 0 18px,#fffaf0 18px 36px); transform: rotate(var(--invitation-blue-tilt)); margin-top: 20px; }
+.invitation-photo-space { aspect-ratio: 1; background: #f6eddf; border: 3px solid #fffaf0; margin-bottom: 7px; }
+.page .invitation-about article { color: #493127; text-align: center; font-size: 17px; font-style: italic; line-height: 1.5; overflow-wrap: break-word; }
+.page .invitation-about article p { margin: 0 0 15px; color: #493127; font-size: inherit; line-height: inherit; }
+.invitation-front { position: absolute; inset: 0; background: linear-gradient(100deg,#f5e8cd,#eadabe); clip-path: polygon(0 0,50% 47%,100% 0,100% 100%,0 100%); z-index: 3; border-radius: 0 0 5px 5px; }
+.invitation-front::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,#fff3db,#f2e4c9); clip-path: polygon(0 100%,50% 44%,100% 100%); }
+.invitation-wax { position: absolute; z-index: 6; top: 119px; left: calc(50% - 26.5px); width: 53px; height: 53px; border-radius: 46% 54% 50% 47% / 49% 43% 57% 51%; background: radial-gradient(ellipse at 30% 20%,#bc6579 0,#9a415c 55%,#773049 100%); box-shadow: inset 2px 2px 2px #e3a0af80,inset -2px -3px 3px #61213970,1px 4px 4px #61402f38; opacity: var(--invitation-seal); pointer-events: none; }
+.invitation-wax::before { content: ''; position: absolute; inset: 7px; border: 1px solid #bc7287; border-radius: 50%; box-shadow: inset 1px 1px 2px #63233c66; }
+.invitation-wax::after { content: ''; position: absolute; inset: 16px; border: 1px solid #c78698; border-radius: 50%; }
+.invitation-caption { position: absolute; bottom: 8px; width: 100%; text-align: center; font-size: 21px; font-style: italic; margin: 0; color: var(--dark); }
+/* Keep the ivory paper readable in both site themes. */
+:root[saved-theme="dark"] .invitation-paper { background: #fff7e8; color: #493127; }
+@media (max-width: 700px) {
+  .invitation-stage { height: 1280px; }
+  .invitation-envelope { left: 1%; width: 98%; height: 170px; }
+  .invitation-flap { height: 110px; }
+  .invitation-paper { bottom: 190px; left: 2%; width: 96%; height: 980px; padding: 25px 17px; transform: translateY(calc((1 - var(--invitation-lift)) * 1200px)); }
+  .invitation-composition { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; }
+  .invitation-about { grid-column: 1 / -1; grid-row: 1; }
+  .page .invitation-about article { font-size: 17px; }
+  .invitation-strip { width: 100%; max-width: 100px; justify-self: center; padding: 6px 6px 20px; }
+  .invitation-strip-blue { margin-top: 15px; }
+  .invitation-wax { top: 78px; width: 48px; height: 48px; left: calc(50% - 24px); }
+  .invitation-wax::after { inset: 14px; }
+  .page .invitation-paper-title { font-size: 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .party-invitation { padding-bottom: 0; }
+  .invitation-stage { position: relative; top: 0; }
+}
+/* END EDEN PARTY INVITATION */
+/* Keep the paper centered inside the envelope */
+.invitation-envelope {
+  left: 3%;
+  width: 94%;
+  box-sizing: border-box;
+}
+
+.invitation-paper-slot {
+  left: 0;
+  width: 100%;
+}
+
+.invitation-paper {
+  left: 5%;
+  width: 90%;
+  box-sizing: border-box;
+}

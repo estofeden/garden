@@ -1,3 +1,4 @@
+import PartyInvitation from "./PartyInvitation"
 import { PageFrame, PageFrameProps } from "./types"
 import GardenHeader from "./GardenHeader"
 import HeaderConstructor from "../Header"
@@ -44,7 +45,9 @@ export const DefaultFrame: PageFrame = {
               ))}
             </div>
           </div>
-          <Content {...componentData} />
+          {componentData.fileData.slug === "index" ? (
+            <PartyInvitation><Content {...componentData} /></PartyInvitation>
+          ) : <Content {...componentData} />}
           <hr />
           <div class="page-footer">
             {afterBody.map((BodyComponent) => (

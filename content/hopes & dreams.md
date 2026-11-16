@@ -1,7 +1,7 @@
-## things i dream of
+[[wouldn’t it be cool…]]— dreams I don’t need a plan for yet
 
-## things i want to learn
+[[a little closer]] — goals I'm actively working toward, with one next step
 
-## places i want to go
+[[someday, somewhere]] — experiences I want to have
 
-## little steps toward them
+[[it happened!]] — wishes that became real
