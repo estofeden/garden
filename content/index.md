@@ -1,7 +1,11 @@
 ---
 title: Hey, you made it!
 ---
-Welcome to my garden.
+Welcome to my garden; where i plant myself and we watch it grow!
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+## Take a look around
+
+- [[books|what I’m reading]]
+- [[notes|thoughts & discoveries]]
+- [[recipes]]
+-
