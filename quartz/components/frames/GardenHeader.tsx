@@ -5,7 +5,7 @@ export default function GardenHeader({ cfg, fileData, allFiles }: QuartzComponen
   const root = pathToRoot(fileData.slug!)
     const pages = [
     ["home", ""],
-    ["books", "books"],
+["my reading corner", "books"],
     ["film", "film"],
     ["the listening room", "music"],
     ["recipes", "recipes"],

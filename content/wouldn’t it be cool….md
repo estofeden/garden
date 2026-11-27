@@ -1,0 +1,7 @@
+- Go to a Malcolm Todd concert
+- Read 100 books in one year
+- Becoming a YouTuber with 1 million followers
+- Doing interior design and ceramic making on the side
+- Hosting a home bakery/cafe
+- Learning to ice-skate
+- Play a game of hockey; heated rivalry style

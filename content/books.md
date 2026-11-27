@@ -1,9 +1,9 @@
-# My reading corner
+---
+title: my reading corner
+---
+## currently reading
+Big Swiss by Jen Beagin
 
-[[Currently reading]]
+[[my favorite reads]]
 
 [[archive of books | archive of books]]
-[[Project Hail Mary]]
-[[The Hobbit by J.R.R. Tolkien]]
-[[Sula by Toni Morrison]]
-[[Perfume by Peter Suskind]]
